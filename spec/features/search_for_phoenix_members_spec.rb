@@ -22,9 +22,9 @@ RSpec.describe "As a user when I- ", type: :feature do
     end
   end
 
-  xit 'can find members for other houses' do
+  it 'can find members for other houses' do
     visit "/"
-    # select "Hufflepuff" from drop down
+    page.select("Hufflepuff", :from => "house")
     click_on 'Search For Members'
     expect(current_path).to eq('/search')
     list = find('.wizards').all('li')
