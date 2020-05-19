@@ -1,7 +1,7 @@
 <section>
   <ul class="wizards">
     <% @hogwarts.display_hogwarts_data.each do |wizard| %>
-      <li>
+      <li id=<%= wizard["_id"]%>>
         <%= wizard["name"] %>
         <%= wizard["role"] if wizard["role"] %>
         <%=  wizard["house"] %>

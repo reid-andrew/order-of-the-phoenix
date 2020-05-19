@@ -5,7 +5,7 @@ class HogwartsResults
   end
 
   def display_hogwarts_data
-    data = call_hogwarts_service
+    call_hogwarts_service
   end
 
   private
