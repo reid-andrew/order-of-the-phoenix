@@ -1,5 +1,4 @@
 class HogwartsResults
-
   attr_reader :house
 
   def initialize(house)
