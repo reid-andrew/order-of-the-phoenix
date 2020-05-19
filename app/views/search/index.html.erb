@@ -2,10 +2,10 @@
   <ul class="wizards">
     <% @hogwarts.display_hogwarts_data.each do |wizard| %>
       <li id=<%= wizard["_id"]%>>
-        <%= wizard["name"] %>
-        <%= wizard["role"] if wizard["role"] %>
-        <%=  wizard["house"] %>
-        <%= wizard["patronus"] if wizard["patronus"] %>
+        <%= "Name: #{wizard['name']}" %><br>
+        <%= "Role: #{wizard['role']}" if wizard["role"] %><br>
+        <%= "House: #{wizard['house']}" %><br>
+        <%= "Patronus: #{wizard['patronus']}" if wizard["patronus"] %>
       </li>
     <% end %>
   </ul>

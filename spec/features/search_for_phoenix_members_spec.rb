@@ -20,6 +20,8 @@ RSpec.describe "As a user when I- ", type: :feature do
       expect(page).to have_content('Gryffindor')
       expect(page).to have_content('goat')
     end
+
+    
   end
 
   it 'can find members for other houses' do
@@ -29,7 +31,7 @@ RSpec.describe "As a user when I- ", type: :feature do
     expect(current_path).to eq('/search')
     list = find('.wizards').all('li')
     expect(list.size).to eq(3)
-    
+
     within('#5a12333f0f5ae10021650d96') do
       expect(page).to have_content('Zacharias Smith')
       expect(page).to have_content('student')
