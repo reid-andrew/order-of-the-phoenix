@@ -1,0 +1,12 @@
+<section>
+  <ul class="wizards">
+    <% @hogwarts.display_hogwarts_data.each do |wizard| %>
+      <li>
+        <%= wizard["name"] %>
+        <%= wizard["role"] if wizard["role"] %>
+        <%=  wizard["house"] %>
+        <%= wizard["patronus"] if wizard["patronus"] %>
+      </li>
+    <% end %>
+  </ul>
+</section>
