@@ -1,4 +1,9 @@
 class HogwartsService
+
+  def initialize(house)
+    @house = house
+  end
+
   def hogwarts_json
     hogwarts_parse
   end
@@ -8,7 +13,7 @@ class HogwartsService
   def hogwarts_response
     Faraday.get('https://www.potterapi.com/v1/characters') do |req|
       req.params['key'] = ENV['POTTER_API_KEY']
-      req.params['house'] = 'Gryffindor'
+      req.params['house'] = "#{@house}"
       req.params['orderOfThePhoenix'] = true
     end
   end
