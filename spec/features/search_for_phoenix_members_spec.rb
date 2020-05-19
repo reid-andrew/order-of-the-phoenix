@@ -28,7 +28,12 @@ RSpec.describe "As a user when I- ", type: :feature do
     click_on 'Search For Members'
     expect(current_path).to eq('/search')
     list = find('.wizards').all('li')
-    expect(page).to have_content('Zacharias Smith')
     expect(list.size).to eq(3)
+    
+    within('#5a12333f0f5ae10021650d96') do
+      expect(page).to have_content('Zacharias Smith')
+      expect(page).to have_content('student')
+      expect(page).to have_content('Hufflepuff')
+    end
   end
 end
